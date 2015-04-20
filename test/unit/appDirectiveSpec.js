@@ -22,12 +22,4 @@ describe('calendar', function(){
         expect(element.find('.cal-cell').length).toBe(range.end.getDate());
         expect(element.find('.cal-cell-out').length).toBe(range.days.length - range.end.getDate());
     });
-    
-    it('should render the range correctly on April 1995', function(){
-        var cusDate = new Date('1995', '3', '1');
-        var range = CalendarRange.getMonthlyRange(cusDate);
-        console.log(scope);
-        expect(element.find('select option[selected=\'selected\']').eq(0).text()).toEqual('April');
-        expect(element.find('select option[selected=\'selected\']').eq(1).text()).toEqual('1995');
-    });
 })
