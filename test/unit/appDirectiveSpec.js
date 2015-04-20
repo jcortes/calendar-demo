@@ -23,7 +23,7 @@ describe('calendar', function(){
         expect(element.find('.cal-cell-out').length).toBe(range.days.length - range.end.getDate());
     });
     
-    it('should render the range correctly on April of 1995', function(){
+    it('should render the range correctly on April 1995', function(){
         var cusDate = new Date('1995', '3', '1');
         var range = CalendarRange.getMonthlyRange(cusDate);
         console.log(scope);
