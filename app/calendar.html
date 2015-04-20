@@ -1,0 +1,17 @@
+<div class="cal-year-month">    
+    <select ng-model="monthSelected" 
+            ng-options="month as month.label for month in months">
+    </select>
+    <select ng-model="yearSelected" 
+            ng-options="year as year.label for year in years">
+    </select>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-2" 
+             ng-repeat="day in range.days track by $index" 
+             ng-class="{'cal-cell': !isOut($index, day.day), 'cal-cell-out': isOut($index, day.day)}">
+            {{day.day}}
+        </div>
+    </div>
+</div>
